@@ -1,4 +1,5 @@
 module Jisho
+  # A single result from the API response
   class Result
     attr_reader :response
 
@@ -12,19 +13,17 @@ module Jisho
 
     def senses
       response.fetch(:senses)
-        .map {|s| Sense.new(s) }
+              .map { |s| Sense.new(s) }
     end
 
     def to_h
-      keys.reduce({}) do |hash, k|
+      keys.each_with_object({}) do |k, hash|
         hash[k] = begin
                     send(k)
                   rescue NoMethodError
                     response.fetch(k, nil)
                   end
-        hash
       end
-
     end
 
     def method_missing(sym, *args, &block)
@@ -35,8 +34,8 @@ module Jisho
       end
     end
 
-    def self.method_missing(*args, &block)
-      super
+    def respond_to_missing?(method_name, include_private = false)
+      keys.include?(method_name) || super
     end
   end
 end

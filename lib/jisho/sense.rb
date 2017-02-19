@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module Jisho
+  # Wrapper for sense hashes from the Jisho API
   class Sense
     attr_reader :response
 
@@ -7,8 +10,8 @@ module Jisho
     end
 
     def parts_of_speech
-      response.fetch(:parts_of_speech, [""])
-        .map {|p| p.downcase.to_sym }
+      response.fetch(:parts_of_speech, [''])
+              .map { |p| p.downcase.to_sym }
     end
 
     def to_h
@@ -25,6 +28,10 @@ module Jisho
       else
         super
       end
+    end
+
+    def respond_to_missing?(method_name, include_private = false)
+      keys.include?(method_name) || super
     end
   end
 end

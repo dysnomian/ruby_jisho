@@ -1,6 +1,7 @@
 require 'json'
 
 module Jisho
+  # Enumberable to store metadata and wrap Result objects cleanly
   class Results
     include Enumerable
 
@@ -19,7 +20,7 @@ module Jisho
     end
 
     def each
-      data.each {|r| yield r }
+      data.each { |r| yield r }
     end
 
     def method_missing(sym, *args, &block)
@@ -30,15 +31,15 @@ module Jisho
       end
     end
 
-    def self.method_missing(*args, &block)
-      super
+    def respond_to_missing?(method_name, include_private = false)
+      keys.include?(method_name) || super
     end
 
     private
 
     def data
       payload.fetch(:data, [{}])
-        .map {|r| Jisho::Result.new(r) }
+             .map { |r| Jisho::Result.new(r) }
     end
   end
 end

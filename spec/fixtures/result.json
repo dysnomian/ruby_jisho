@@ -1,0 +1,48 @@
+{
+  "is_common": false,
+  "senses": [{
+    "source": [],
+    "parts_of_speech": [
+      "Noun"
+    ],
+    "antonyms": [],
+    "restrictions": [],
+    "info": [],
+    "links": [],
+    "see_also": [],
+    "english_definitions": [
+      "squirrel (excluding flying squirrels)"
+    ],
+    "tags": [
+      "Usually written using kana alone"
+    ]
+  }, {
+    "source": [],
+    "parts_of_speech": [],
+    "antonyms": [],
+    "restrictions": [],
+    "links": [],
+    "info": [],
+    "tags": [
+      "Usually written using kana alone"
+    ],
+    "see_also": [
+      "日本栗鼠"
+    ],
+    "english_definitions": [
+      "Japanese squirrel (Sciurus lis)"
+    ]
+  }],
+  "attribution": {
+    "jmdict": true,
+    "dbpedia": false,
+    "jmnedict": false
+  },
+  "japanese": [{
+    "word": "栗鼠",
+    "reading": "りす"
+  }, {
+    "reading": "リス"
+  }],
+  "tags": []
+}
