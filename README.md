@@ -1,8 +1,6 @@
 # Jisho
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/jisho`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A Ruby wrapper for the [Jisho](https://jisho.org) API.
 
 ## Installation
 
@@ -22,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To search Jisho, use the `.search` method:
+
+```ruby
+Jisho.search("リス")
+```
+
+Responses will be in the form of a `Jisho::Results` object.
 
 ## Development
 
@@ -32,5 +36,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/Liss McCabe/jisho.
+Bug reports and pull requests are welcome on GitHub at https://github.com/dysnomian/jisho.
 
+## Thanks
+
+My sincerest thanks to the Jisho team for building such a beautiful and thoughtful tool.
