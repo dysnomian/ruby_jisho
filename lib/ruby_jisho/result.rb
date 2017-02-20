@@ -1,4 +1,4 @@
-module Jisho
+module RubyJisho
   # A single result from the API response
   class Result
     attr_reader :response

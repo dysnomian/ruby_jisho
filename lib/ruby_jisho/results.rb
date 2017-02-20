@@ -1,6 +1,6 @@
 require 'json'
 
-module Jisho
+module RubyJisho
   # Enumberable to store metadata and wrap Result objects cleanly
   class Results
     include Enumerable
@@ -39,7 +39,7 @@ module Jisho
 
     def data
       payload.fetch(:data, [{}])
-             .map { |r| Jisho::Result.new(r) }
+             .map { |r| Result.new(r) }
     end
   end
 end

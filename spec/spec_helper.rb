@@ -1,5 +1,5 @@
 require 'bundler/setup'
-require 'jisho'
+require 'ruby_jisho'
 require 'json'
 
 RSpec.configure do |config|

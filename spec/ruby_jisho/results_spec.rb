@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe Jisho::Results do
-  subject { Jisho::Results.new(payload) }
+describe RubyJisho::Results do
+  subject { RubyJisho::Results.new(payload) }
 
   let(:payload) { load_fixture(name: :squirrel, parse: false) }
-  let!(:result) { Jisho::Result.new({}) }
+  let!(:result) { RubyJisho::Result.new({}) }
 
-  before { allow(Jisho::Result).to receive(:new).and_return(result) }
+  before { allow(RubyJisho::Result).to receive(:new).and_return(result) }
 
   describe '#meta' do
     it 'returns a hash of the meta content' do

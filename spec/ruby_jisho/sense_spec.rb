@@ -2,8 +2,8 @@
 
 require 'spec_helper'
 
-describe Jisho::Sense do
-  subject { Jisho::Sense.new(response) }
+describe RubyJisho::Sense do
+  subject { RubyJisho::Sense.new(response) }
 
   let(:response) { load_fixture(name: :sense_response) }
 

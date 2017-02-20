@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'bundler/setup'
-require 'jisho'
+require 'ruby_jisho'
 
 require 'pry'
 Pry.start

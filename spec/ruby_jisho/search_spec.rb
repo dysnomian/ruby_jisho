@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Jisho::Search do
-  subject { Jisho::Search.new(query) }
+describe RubyJisho::Search do
+  subject { RubyJisho::Search.new(query) }
 
   let(:query) { 'squirrel' }
   let(:url)   { "http://jisho.org/api/v1/search/words?keyword=#{query}" }
@@ -12,14 +12,14 @@ describe Jisho::Search do
     f.new(json)
   end
 
-  let(:results) { Jisho::Results.new(json) }
+  let(:results) { RubyJisho::Results.new(json) }
 
   before do
     allow(Faraday).to receive(:get)
       .with("http://jisho.org/api/v1/search/words?keyword=#{query}")
       .and_return(faraday_mock)
 
-    allow(Jisho::Results).to receive(:new)
+    allow(RubyJisho::Results).to receive(:new)
       .with(json).and_return(results)
   end
 

@@ -1,6 +1,6 @@
 require 'faraday'
 
-module Jisho
+module RubyJisho
   # Queries the Jisho API and returns a Results object
   class Search
     attr_reader :query
@@ -10,7 +10,7 @@ module Jisho
     end
 
     def results
-      @results ||= Jisho::Results.new(json_response)
+      @results ||= Results.new(json_response)
     end
 
     private

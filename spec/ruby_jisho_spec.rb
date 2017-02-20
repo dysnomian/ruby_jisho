@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'json'
 
-describe Jisho do
+describe RubyJisho do
   describe '.search' do
     let(:query) { 'squirrel' }
 
@@ -10,10 +10,10 @@ describe Jisho do
       m.new(results)
     end
 
-    let(:results) { Jisho::Results.new('{}') }
+    let(:results) { RubyJisho::Results.new('{}') }
 
     before do
-      allow(Jisho::Search).to receive(:new).with(query)
+      allow(RubyJisho::Search).to receive(:new).with(query)
         .and_return(mock_search)
     end
 

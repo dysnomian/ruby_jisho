@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Jisho
+module RubyJisho
   # Wrapper for sense hashes from the Jisho API
   class Sense
     attr_reader :response

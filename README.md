@@ -1,4 +1,4 @@
-# Jisho
+# RubyJisho
 
 A Ruby wrapper for the [Jisho](https://jisho.org) API.
 
@@ -7,7 +7,7 @@ A Ruby wrapper for the [Jisho](https://jisho.org) API.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'jisho'
+gem 'ruby_jisho'
 ```
 
 And then execute:
@@ -16,17 +16,17 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install jisho
+    $ gem install ruby_jisho
 
 ## Usage
 
 To search Jisho, use the `.search` method:
 
 ```ruby
-Jisho.search("リス")
+RubyJisho.search("リス")
 ```
 
-Responses will be in the form of a `Jisho::Results` object.
+Responses will be in the form of a `RubyJisho::Results` object.
 
 ## Development
 
@@ -36,7 +36,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/dysnomian/jisho.
+Bug reports and pull requests are welcome on GitHub at https://github.com/dysnomian/ruby_jisho.
 
 ## Thanks
 

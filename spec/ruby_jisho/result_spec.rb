@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Jisho::Result do
-  subject { Jisho::Result.new(response) }
+describe RubyJisho::Result do
+  subject { RubyJisho::Result.new(response) }
 
   let(:response) { load_fixture(name: :result) }
 
@@ -37,7 +37,7 @@ describe Jisho::Result do
     end
 
     it 'returns an array of Sense objects' do
-      expect(subject.senses.first).to be_a(Jisho::Sense)
+      expect(subject.senses.first).to be_a(RubyJisho::Sense)
     end
   end
 
@@ -64,10 +64,10 @@ describe Jisho::Result do
         tags: []
       }
     end
-    let!(:sense) { Jisho::Sense.new({}) }
+    let!(:sense) { RubyJisho::Sense.new({}) }
 
     before do
-      allow(Jisho::Sense).to receive(:new).and_return(sense)
+      allow(RubyJisho::Sense).to receive(:new).and_return(sense)
     end
 
     it 'builds to expected hash from Result methods' do
