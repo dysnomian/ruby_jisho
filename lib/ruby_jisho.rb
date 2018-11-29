@@ -1,4 +1,3 @@
-require 'ruby_jisho/version'
 require 'ruby_jisho/search'
 require 'ruby_jisho/result'
 require 'ruby_jisho/sense'
