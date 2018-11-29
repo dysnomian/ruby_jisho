@@ -1,5 +1,7 @@
 # RubyJisho
 
+[![Build Status](https://www.travis-ci.org/dysnomian/ruby_jisho.svg?branch=master)](https://www.travis-ci.org/dysnomian/ruby_jisho)
+
 A Ruby wrapper for the [Jisho](https://jisho.org) API.
 
 ## Installation
