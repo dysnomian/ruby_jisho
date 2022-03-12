@@ -15,10 +15,10 @@ Gem::Specification.new do |spec|
     f.match(%r{^(bin|spec)/})
   end
 
-  spec.add_development_dependency 'bundler', '~> 1.14'
-  spec.add_development_dependency 'rake',    '~> 10.0'
-  spec.add_development_dependency 'rspec',   '~> 3.0'
-  spec.add_development_dependency 'rubocop', '~> 0.49'
-  spec.add_development_dependency 'pry',     '~> 0.10'
-  spec.add_dependency             'faraday', '~> 0.9'
+  spec.add_development_dependency 'bundler', '~> 2.3.9'
+  spec.add_development_dependency 'rake',    '~> 13.0.6'
+  spec.add_development_dependency 'rspec',   '~> 3.11.0'
+  spec.add_development_dependency 'rubocop', '~> 1.26.0'
+  spec.add_development_dependency 'pry',     '~> 0.14.1'
+  spec.add_dependency             'faraday', '~> 2.2.0'
 end
