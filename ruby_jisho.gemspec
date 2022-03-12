@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'ruby_jisho'
-  spec.version       = '0.1.1'
+  spec.version       = '0.1.2'
   spec.authors       = ['Liss McCabe']
   spec.email         = ['liss@eristiccode.com']
 
