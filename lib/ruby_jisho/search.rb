@@ -20,7 +20,7 @@ module RubyJisho
     end
 
     def endpoint
-      'http://jisho.org/api/v1/search/words?keyword='
+      'https://jisho.org/api/v1/search/words?keyword='
     end
   end
 end

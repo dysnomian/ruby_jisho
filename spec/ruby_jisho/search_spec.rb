@@ -4,7 +4,7 @@ describe RubyJisho::Search do
   subject { RubyJisho::Search.new(query) }
 
   let(:query) { 'squirrel' }
-  let(:url)   { "http://jisho.org/api/v1/search/words?keyword=#{query}" }
+  let(:url)   { "https://jisho.org/api/v1/search/words?keyword=#{query}" }
   let(:json)  { load_fixture(name: query, parse: false) }
 
   let(:faraday_mock) do
@@ -16,7 +16,7 @@ describe RubyJisho::Search do
 
   before do
     allow(Faraday).to receive(:get)
-      .with("http://jisho.org/api/v1/search/words?keyword=#{query}")
+      .with("https://jisho.org/api/v1/search/words?keyword=#{query}")
       .and_return(faraday_mock)
 
     allow(RubyJisho::Results).to receive(:new)
